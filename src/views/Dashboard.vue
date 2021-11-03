@@ -1,6 +1,18 @@
 <template>
-  <div class="dashboard">This is dashboard page</div>
+  <div class="dashboard">
+    <users-chart />
+  </div>
 </template>
+
+<script>
+import UsersChart from "@/components/dashboard/UsersChart/UsersChart";
+
+export default {
+  components: {
+    "users-chart": UsersChart,
+  },
+};
+</script>
 
 <style scoped>
 .dashboard {
