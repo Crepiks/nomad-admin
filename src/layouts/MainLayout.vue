@@ -27,7 +27,7 @@ export default {
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 270px 1fr;
   grid-template-rows: 100vh;
   background-color: $background-color;
 }
