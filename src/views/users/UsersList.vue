@@ -1,11 +1,22 @@
 <template>
   <div class="users-list">
     <h1 class="users-list__heading">Пользователи</h1>
+    <users-table :users="users" />
   </div>
 </template>
 
 <script>
-export default {};
+import UsersTable from "@/components/users/UsersTable/UsersTable";
+import users from "@/data/users";
+
+export default {
+  components: {
+    "users-table": UsersTable,
+  },
+  data: () => ({
+    users,
+  }),
+};
 </script>
 
 <style scoped>
@@ -17,6 +28,7 @@ export default {};
 }
 
 .users-list__heading {
+  margin-bottom: 20px;
   font-size: 28px;
   font-weight: 500;
 }
