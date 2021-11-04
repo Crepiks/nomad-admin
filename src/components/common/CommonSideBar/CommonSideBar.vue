@@ -24,7 +24,7 @@
     </div>
     <div class="side-bar__section">
       <h3 class="side-bar__section-title">Прочее</h3>
-      <router-link to="/" class="side-bar__link">
+      <router-link to="/users" class="side-bar__link">
         <i class="bx bx-user side-bar__icon" />
         <span class="side-bar__link-text">Пользователи</span>
       </router-link>

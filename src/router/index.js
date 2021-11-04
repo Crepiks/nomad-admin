@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 
 import MainLayout from "@/layouts/MainLayout";
 import Dashboard from "@/views/Dashboard";
+import UsersList from "@/views/users/UsersList";
 
 Vue.use(VueRouter);
 
@@ -15,6 +16,11 @@ const routes = [
         path: "",
         name: "dashboard",
         component: Dashboard,
+      },
+      {
+        path: "users",
+        name: "users-list",
+        component: UsersList,
       },
     ],
   },
