@@ -1,6 +1,7 @@
 <template>
   <div class="payments-chart">
     <h3 class="payments-chart__heading">Платежи</h3>
+    <div class="transactions-list__divider" />
     <apexchart
       :options="options"
       :series="series"
@@ -109,19 +110,25 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .payments-chart {
   border-radius: 14px;
   background-color: white;
 }
 
 .payments-chart__heading {
-  padding: 20px;
+  padding: 16px 20px;
   font-size: 20px;
   font-weight: 500;
 }
 
+.transactions-list__divider {
+  width: 100%;
+  height: 1px;
+  background-color: $background-color;
+}
+
 .payments-chart__body {
-  padding: 0 14px 0 6px;
+  padding: 16px 14px 16px 6px;
 }
 </style>
