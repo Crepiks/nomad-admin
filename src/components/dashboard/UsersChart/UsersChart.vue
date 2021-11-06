@@ -1,7 +1,10 @@
 <template>
   <div class="users-chart">
     <h3 class="users-chart__heading">Пользователи</h3>
-    <apexchart :options="options" :series="series" type="area" height="350" />
+    <div class="users-chart__divider" />
+    <div class="users-chart__body">
+      <apexchart :options="options" :series="series" type="area" height="350" />
+    </div>
   </div>
 </template>
 
@@ -74,16 +77,25 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .users-chart {
-  padding: 30px;
   border-radius: 14px;
   background-color: white;
 }
 
 .users-chart__heading {
-  margin-bottom: 20px;
+  padding: 20px 30px;
   font-size: 24px;
   font-weight: 500;
+}
+
+.users-chart__divider {
+  width: 100%;
+  height: 1px;
+  background-color: $background-color;
+}
+
+.users-chart__body {
+  padding: 20px 30px;
 }
 </style>

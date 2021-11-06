@@ -1,7 +1,7 @@
 <template>
   <div class="payments-chart">
     <h3 class="payments-chart__heading">Платежи</h3>
-    <div class="transactions-list__divider" />
+    <div class="payments-chart__divider" />
     <apexchart
       :options="options"
       :series="series"
@@ -122,7 +122,7 @@ export default {
   font-weight: 500;
 }
 
-.transactions-list__divider {
+.payments-chart__divider {
   width: 100%;
   height: 1px;
   background-color: $background-color;
