@@ -1,38 +1,77 @@
 <template>
   <nav class="side-bar">
-    <div class="side-bar__section">
-      <h3 class="side-bar__section-title">Данные</h3>
-      <router-link to="/" class="side-bar__link">
-        <i class="bx bx-bar-chart-alt-2 side-bar__icon" />
-        <span class="side-bar__link-text">Аналитика</span>
-      </router-link>
+    <div class="side-bar__logo">
+      <i class="bx bx-book-bookmark" />
+      <span class="side-bar__logo-text">Nomad</span>
     </div>
-    <div class="side-bar__section">
-      <h3 class="side-bar__section-title">Контент</h3>
-      <router-link to="/" class="side-bar__link">
-        <i class="bx bx-book-alt side-bar__icon" />
-        <span class="side-bar__link-text">Книги</span>
-      </router-link>
-      <router-link to="/" class="side-bar__link">
-        <i class="bx bx-bookmarks side-bar__icon" />
-        <span class="side-bar__link-text">Разделы</span>
-      </router-link>
-      <router-link to="/" class="side-bar__link">
-        <i class="bx bx-pyramid side-bar__icon" />
-        <span class="side-bar__link-text">Темы</span>
-      </router-link>
+    <div class="side-bar__content">
+      <div class="side-bar__section">
+        <h3 class="side-bar__section-title">Данные</h3>
+        <router-link
+          to="/"
+          exact
+          active-class="side-bar__link_active"
+          class="side-bar__link"
+        >
+          <i class="bx bx-bar-chart-alt-2 side-bar__icon" />
+          <span class="side-bar__link-text">Аналитика</span>
+        </router-link>
+      </div>
+      <div class="side-bar__section">
+        <h3 class="side-bar__section-title">Контент</h3>
+        <router-link
+          to="/books"
+          active-class="side-bar__link_active"
+          class="side-bar__link"
+        >
+          <i class="bx bx-book-alt side-bar__icon" />
+          <span class="side-bar__link-text">Книги</span>
+        </router-link>
+        <router-link
+          to="/sections"
+          active-class="side-bar__link_active"
+          class="side-bar__link"
+        >
+          <i class="bx bx-bookmarks side-bar__icon" />
+          <span class="side-bar__link-text">Разделы</span>
+        </router-link>
+        <router-link
+          to="/units"
+          active-class="side-bar__link_active"
+          class="side-bar__link"
+        >
+          <i class="bx bx-pyramid side-bar__icon" />
+          <span class="side-bar__link-text">Темы</span>
+        </router-link>
+      </div>
+      <div class="side-bar__section">
+        <h3 class="side-bar__section-title">Прочее</h3>
+        <router-link
+          to="/users"
+          active-class="side-bar__link_active"
+          class="side-bar__link"
+        >
+          <i class="bx bx-user side-bar__icon" />
+          <span class="side-bar__link-text">Пользователи</span>
+        </router-link>
+        <router-link
+          to="/purchases"
+          active-class="side-bar__link_active"
+          class="side-bar__link"
+        >
+          <i class="bx bx-credit-card-front side-bar__icon" />
+          <span class="side-bar__link-text">Покупки</span>
+        </router-link>
+      </div>
     </div>
-    <div class="side-bar__section">
-      <h3 class="side-bar__section-title">Прочее</h3>
-      <router-link to="/users" class="side-bar__link">
-        <i class="bx bx-user side-bar__icon" />
-        <span class="side-bar__link-text">Пользователи</span>
-      </router-link>
-      <router-link to="/" class="side-bar__link">
-        <i class="bx bx-credit-card-front side-bar__icon" />
-        <span class="side-bar__link-text">Платежи</span>
-      </router-link>
-    </div>
+    <router-link
+      to="/settings"
+      active-class="side-bar__link_active"
+      class="side-bar__link"
+    >
+      <i class="bx bx-cog side-bar__icon" />
+      <span class="side-bar__link-text">Настройки</span>
+    </router-link>
   </nav>
 </template>
 
@@ -43,13 +82,34 @@ export default {};
 <style lang="scss" scoped>
 .side-bar {
   height: 100%;
-  padding: 50px 30px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  background-color: $primary-color;
+}
+
+.side-bar__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.side-bar__logo-text {
+  margin-left: 10px;
+}
+
+.side-bar__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
-  background-color: $primary-color;
 }
 
 .side-bar__section {
@@ -74,6 +134,13 @@ export default {};
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+  transition: 300ms;
+  border-radius: 10px;
+}
+
+.side-bar__link_active {
+  color: white;
+  background-color: black;
 }
 
 .side-bar__icon {
