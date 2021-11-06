@@ -24,6 +24,9 @@ export default {
         type: "area",
         toolbar: false,
       },
+      grid: {
+        show: false,
+      },
       theme: {
         mode: "light",
         monochrome: {
@@ -32,6 +35,9 @@ export default {
           shadeTo: "light",
           shadeIntensity: 0.9,
         },
+      },
+      legend: {
+        show: false,
       },
       dataLabels: {
         enabled: false,
@@ -52,6 +58,9 @@ export default {
         ],
         labels: {
           format: "dd/MM/yyyy",
+        },
+        axisBorder: {
+          show: false,
         },
         tooltip: false,
       },
