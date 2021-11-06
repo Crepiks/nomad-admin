@@ -2,21 +2,23 @@
   <div class="dashboard">
     <users-chart class="dashboard__users-chart" />
     <div class="dashboard__row">
-      <div></div>
       <div>
-        <payments-chart />
+        <transactions-list />
       </div>
+      <payments-chart />
     </div>
   </div>
 </template>
 
 <script>
 import UsersChart from "@/components/dashboard/UsersChart/UsersChart";
+import TransactionsList from "@/components/dashboard/TransactionsList/TransactionsList";
 import PaymentsChart from "@/components/dashboard/PaymentsChart/PaymentsChart";
 
 export default {
   components: {
     "users-chart": UsersChart,
+    "transactions-list": TransactionsList,
     "payments-chart": PaymentsChart,
   },
 };
