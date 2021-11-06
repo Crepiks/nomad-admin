@@ -4,7 +4,9 @@
       <common-side-bar />
     </div>
     <div class="main-layout__content">
-      <common-header />
+      <div class="main-layout__header-wrapper">
+        <common-header class="main-layout__header" />
+      </div>
       <router-view />
     </div>
   </div>
@@ -33,6 +35,20 @@ export default {
 }
 
 .main-layout__content {
+  position: relative;
   overflow-y: auto;
+}
+
+.main-layout__header-wrapper {
+  height: 70px;
+}
+
+.main-layout__header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(100% - 270px);
+  height: 70px;
+  z-index: 1;
 }
 </style>

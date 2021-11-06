@@ -10,7 +10,6 @@
 <style scoped>
 .header {
   width: 100%;
-  height: 70px;
   padding: 0 30px;
   display: flex;
   align-items: center;

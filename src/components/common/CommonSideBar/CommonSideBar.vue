@@ -133,9 +133,9 @@ export default {};
   align-items: center;
   color: inherit;
   text-decoration: none;
-  cursor: pointer;
-  transition: 300ms;
   border-radius: 10px;
+  transition: 300ms;
+  cursor: pointer;
 }
 
 .side-bar__link_active {
