@@ -28,7 +28,7 @@
           <span class="side-bar__link-text">Книги</span>
         </router-link>
         <router-link
-          to="/sections"
+          to="/chapters"
           active-class="side-bar__link_active"
           class="side-bar__link"
         >
@@ -55,7 +55,7 @@
           <span class="side-bar__link-text">Пользователи</span>
         </router-link>
         <router-link
-          to="/purchases"
+          to="/payments"
           active-class="side-bar__link_active"
           class="side-bar__link"
         >
@@ -75,10 +75,6 @@
   </nav>
 </template>
 
-<script>
-export default {};
-</script>
-
 <style lang="scss" scoped>
 .side-bar {
   height: 100%;
@@ -95,7 +91,7 @@ export default {};
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
+  font-size: 34px;
   font-weight: 700;
   line-height: 1;
   text-transform: uppercase;
@@ -121,14 +117,15 @@ export default {};
   width: 100%;
   margin-bottom: 8px;
   padding: 0 20px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
 }
 
 .side-bar__link {
   width: 100%;
-  padding: 12px 20px;
+  margin-bottom: 4px;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   color: inherit;
@@ -149,7 +146,7 @@ export default {};
 }
 
 .side-bar__link-text {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
 }
 </style>

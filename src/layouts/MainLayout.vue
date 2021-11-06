@@ -29,7 +29,7 @@ export default {
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-columns: 270px 1fr;
+  grid-template-columns: 250px 1fr;
   grid-template-rows: 100vh;
   background-color: $background-color;
 }
@@ -47,7 +47,7 @@ export default {
   position: fixed;
   top: 0;
   right: 0;
-  width: calc(100% - 270px);
+  width: calc(100% - 250px);
   height: 70px;
   z-index: 1;
 }
