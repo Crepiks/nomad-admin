@@ -60,7 +60,7 @@
           class="side-bar__link"
         >
           <i class="bx bx-credit-card-front side-bar__icon" />
-          <span class="side-bar__link-text">Покупки</span>
+          <span class="side-bar__link-text">Платежи</span>
         </router-link>
       </div>
     </div>
